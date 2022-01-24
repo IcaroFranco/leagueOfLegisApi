@@ -1,0 +1,19 @@
+.sumonnerFace {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+.summonerName {
+  flex: 1;
+  span {
+    color: #fff;
+    padding: 20px;
+  }
+}

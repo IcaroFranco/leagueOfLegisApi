@@ -1,0 +1,21 @@
+<div class="conteudo" *ngIf="summonerContent == undefined">
+  <div class="efeito">
+    <div class="input">
+      <input
+        type="text"
+        placeholder="Seu Nick"
+        #name
+        (keyup.enter)="getNickName(name.value)"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="conteudo" *ngIf="summonerContent != undefined">
+  <div class="summonerDetails">
+    <app-summoner [summonerContent]="summonerContent"></app-summoner>
+    <div class="championsMastery" *ngFor="let champion of championsMastery">
+      <app-c-mastery [champion]="champion"></app-c-mastery>
+    </div>
+  </div>
+</div>
